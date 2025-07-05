@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDG Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Custom JS -->
+    <script src="js/data.js" defer></script>
+    <script src="js/charts.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>GDG Events</h1>
+            <div class="filter-container">
+                <label for="category-filter">Filter by Category:</label>
+                <select id="category-filter">
+                    <option value="all">All Events</option>
+                    <option value="workshop">Workshops</option>
+                    <option value="hackathon">Hackathons</option>
+                    <option value="seminar">Seminars</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="events-container" class="events-grid"></section>
+        
+        <section id="event-details" class="hidden">
+            <button id="back-button">← Back to Events</button>
+            <div id="event-details-content"></div>
+        </section>
+
+        <section id="charts-section">
+            <h2>Events by Category</h2>
+            <div id="chart-container"></div>
+        </section>
+
+        <section id="gdg-docs">
+            <h2>Community Guidelines</h2>
+            <iframe id="gdg-docs-frame" src="https://docs.google.com/document/d/1KgoknzdNeWdcMJ9GLXm6VWVLRfMjn52Pwg2snx64QWM/edit?usp=sharing"></iframe>
+        </section>
+    </main>
+
+    <div id="chatbot-widget" class="chatbot-collapsed">
+        <div id="chatbot-header">
+            <h3>Event Assistant</h3>
+            <button id="chatbot-toggle">↕</button>
+        </div>
+        <div id="chatbot-container">
+            <div id="chat-messages"></div>
+            <div id="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Ask a question...">
+                <button id="chat-send">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
